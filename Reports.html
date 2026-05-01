@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search</title>
+<title>Reports</title>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -87,8 +87,8 @@ body{
             <a href="category.html">Category</a>
             <a href="VehicleEntry.html">Vehicle Entry</a>
             <a href="ManageVehicle.html">Manage Vehicles</a>
-            <a href="Reports.html">Reports</a>
-            <a href="search.html" class="active">Search</a>
+            <a href="Reports.html" class="active">Reports</a>
+            <a href="search.html">Search</a>
             <a href="Account Settings.html">Account Setting</a>
             <a href="index.html">Logout</a>
         </div>
@@ -97,19 +97,37 @@ body{
 
         <div class="card">
             <div class="card-header">
-                Search Data |
-                <small>Only the records of the last 30 days are available here</small>
+                Reports |
+                <small>Filter records by date range</small>
             </div>
 
             <div class="card-body">
-                <div class="row justify-content-center mb-4">
-                    <div class="col-12 col-md-8">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter vehicle number">
-                            <div class="input-group-append">
-                                <button class="btn btn-secondary">Search</button>
-                            </div>
-                        </div>
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <label>From Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>To Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Vehicle Type</label>
+                        <select class="form-control">
+                            <option>All</option>
+                            <option>Car</option>
+                            <option>Motorcycle</option>
+                            <option>MiniBus</option>
+                            <option>Pickup Van</option>
+                            <option>MiniVan</option>
+                            <option>VehicleType 101</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-end">
+                        <button class="btn btn-primary w-100" >Generate</button>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -121,29 +139,32 @@ body{
                                 <th>Type</th>
                                 <th>Area</th>
                                 <th>Charge</th>
-                                <th>Arrival Time</th>
+                                <th>Entry Time</th>
+                                <th>Exit Time</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>34</td>
-                                <td>GBN-2306</td>
-                                <td>Car Type 101</td>
                                 <td>1</td>
-                                <td>$ 7.00</td>
-                                <td>2022-07-04 09:29:13</td>
+                                <td>GMW-234</td>
+                                <td>Car</td>
+                                <td>1</td>
+                                <td>$7</td>
+                                <td>2024-05-01 09:00</td>
+                                <td>2024-05-01 11:00</td>
                                 <td><span class="badge-leaved">Leaved</span></td>
                             </tr>
 
                             <tr>
-                                <td>36</td>
-                                <td>GBN-2306</td>
-                                <td>Car</td>
                                 <td>2</td>
-                                <td>$ 4.00</td>
-                                <td>2022-07-04 10:43:15</td>
+                                <td>ABC-123</td>
+                                <td>Bike</td>
+                                <td>2</td>
+                                <td>$5</td>
+                                <td>2024-05-01 10:30</td>
+                                <td>-</td>
                                 <td><span class="badge-parked">Parked</span></td>
                             </tr>
                         </tbody>
@@ -156,6 +177,7 @@ body{
     </div>
 </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
