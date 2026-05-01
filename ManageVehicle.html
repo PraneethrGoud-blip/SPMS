@@ -47,7 +47,7 @@ body{
 
 .table td, 
 .table th{
-    white-space: nowrap; /* prevents breaking */
+    white-space: nowrap;
     font-size:12px;
 }
 
@@ -67,11 +67,7 @@ body{
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 <nav class="navbar navbar-custom d-flex align-items-center">
-
-    <!-- TOGGLE BUTTON -->
     <button class="btn btn-light btn-sm d-md-none mr-2"
             type="button"
             data-toggle="collapse"
@@ -87,8 +83,6 @@ body{
 
 <div class="container-fluid">
 <div class="row">
-
-    <!-- SIDEBAR -->
     <div class="col-12 col-md-3 col-lg-2 p-0">
         <div class="collapse d-md-block sidebar" id="sidebarMenu">
             <a href="dashboard.html">Dashboard</a>
@@ -101,8 +95,6 @@ body{
             <a href="task2.html">Logout</a>
         </div>
     </div>
-
-    <!-- MAIN CONTENT -->
     <div class="col-12 col-md-9 col-lg-10 p-3">
 
         <div class="card">
@@ -111,8 +103,6 @@ body{
             </div>
 
             <div class="card-body">
-
-                <!-- FILTERS -->
                 <div class="d-flex flex-wrap justify-content-between mb-2">
                     <div>
                         Show 
@@ -129,8 +119,6 @@ body{
                         <input type="text" class="form-control d-inline-block w-auto">
                     </div>
                 </div>
-
-                <!-- SCROLLABLE TABLE -->
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped text-center">
                         <thead class="thead-light">
@@ -204,8 +192,6 @@ body{
                         </tbody>
                     </table>
                 </div>
-
-                <!-- PAGINATION -->
                 <div class="d-flex justify-content-between">
                     <span>Showing 1 to 5 of 5 entries</span>
 
@@ -230,8 +216,6 @@ body{
     </div>
 </div>
 </div>
-
-<!-- REQUIRED JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
